@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from puppies.urls import urlpatterns as puppies_url_patterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
 
-
 # drf
 urlpatterns += [
-    url(r'^api-auth/', include('rest_framework.urls'))
+    url(r'^account/', include('rest_framework.urls'))
 ]
+
+# puppies
+urlpatterns += puppies_url_patterns
+
