@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.test import TestCase
-from .models import Puppies
+from puppies.models import Puppies
 
 
 class PuppyTestCase(TestCase):
