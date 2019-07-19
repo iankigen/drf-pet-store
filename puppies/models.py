@@ -5,10 +5,10 @@ from django.db import models
 
 
 class Puppies(models.Model):
-	name = models.CharField(blank=False, null=False, max_length=255)
+	name = models.CharField(db_index=True, blank=False, null=False, max_length=255)
 	age = models.IntegerField(default=0)
-	breed = models.CharField(blank=False, null=False, max_length=50)
-	color = models.CharField(blank=False, null=False, max_length=50)
+	breed = models.CharField(db_index=True, blank=False, null=False, max_length=50)
+	color = models.CharField(db_index=True, blank=False, null=False, max_length=50)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
